@@ -1,6 +1,6 @@
 package intellispace.ixora.jetty;
 
-import intellispaces.framework.core.annotation.Preprocessing;
+import intellispaces.jaquarius.annotation.Preprocessing;
 import intellispaces.ixora.http.HttpPortExchangeChannel;
 import intellispaces.ixora.http.MovableInboundHttpPort;
 import intellispaces.ixora.http.test.AbstractInboundHttpPortTest;

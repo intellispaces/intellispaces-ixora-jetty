@@ -1,7 +1,7 @@
 package intellispace.ixora.jetty;
 
 import intellispaces.common.base.collection.ArraysFunctions;
-import intellispaces.framework.core.object.MovableObjectHandle;
+import intellispaces.jaquarius.object.MovableObjectHandle;
 import intellispaces.ixora.http.HttpMethods;
 import intellispaces.ixora.http.HttpPortExchangeChannel;
 import intellispaces.ixora.http.HttpRequest;

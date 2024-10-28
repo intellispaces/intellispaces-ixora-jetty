@@ -1,11 +1,11 @@
 package intellispace.ixora.jetty;
 
-import intellispaces.framework.core.annotation.Mapper;
-import intellispaces.framework.core.annotation.Mover;
-import intellispaces.framework.core.annotation.ObjectHandle;
-import intellispaces.framework.core.exception.TraverseException;
-import intellispaces.framework.core.object.MovableObjectHandle;
-import intellispaces.framework.core.space.channel.ChannelFunctions;
+import intellispaces.jaquarius.annotation.Mapper;
+import intellispaces.jaquarius.annotation.Mover;
+import intellispaces.jaquarius.annotation.ObjectHandle;
+import intellispaces.jaquarius.exception.TraverseException;
+import intellispaces.jaquarius.object.MovableObjectHandle;
+import intellispaces.jaquarius.space.channel.ChannelFunctions;
 import intellispaces.ixora.http.HttpPortExchangeChannel;
 import intellispaces.ixora.http.InboundHttpPortDomain;
 import intellispaces.ixora.http.MovableInboundHttpPort;
