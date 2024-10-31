@@ -14,11 +14,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 class JettyServlet extends HttpServlet {
-  private MovableObjectHandle<?> actualPort;
+  private MovableObjectHandle<?> logicalPort;
   private Class<? extends HttpPortExchangeChannel> exchangeChannel;
 
-  void init(MovableObjectHandle<?> port, Class<? extends HttpPortExchangeChannel> exchangeChannel) {
-    this.actualPort = port;
+  void init(MovableObjectHandle<?> logicalPort, Class<? extends HttpPortExchangeChannel> exchangeChannel) {
+    this.logicalPort = logicalPort;
     this.exchangeChannel = exchangeChannel;
   }
 
@@ -27,7 +27,7 @@ class JettyServlet extends HttpServlet {
       HttpServletRequest servletRequest, HttpServletResponse servletResponse
   ) throws IOException {
     HttpRequest request = buildRequest(servletRequest);
-    UnmovableHttpResponse response = actualPort.mapOfMovingThru(exchangeChannel, request);
+    UnmovableHttpResponse response = logicalPort.mapOfMovingThru(exchangeChannel, request);
     populateServletResponse(servletResponse, response);
   }
 

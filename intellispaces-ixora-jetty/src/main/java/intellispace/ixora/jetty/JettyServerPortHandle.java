@@ -48,12 +48,11 @@ public abstract class JettyServerPortHandle implements MovableJettyServerPort {
   @Override
   public MovableInboundHttpPort open() {
     try {
-      Class<? extends InboundHttpPortDomain> actualPortDomain = getActualPortDomain(exchangeChannel);
-      MovableObjectHandle<?> actualPort = mapTo(actualPortDomain);
-      if (actualPort == null) {
+      MovableObjectHandle<?> logicalPort = getLogicalPort();
+      if (logicalPort == null) {
         throw TraverseException.withMessage("Could not define actual port");
       }
-      servlet.init(actualPort, exchangeChannel);
+      servlet.init(logicalPort, exchangeChannel);
 
       server.start();
     } catch (Exception e) {
@@ -94,10 +93,13 @@ public abstract class JettyServerPortHandle implements MovableJettyServerPort {
     return portNumber;
   }
 
+  private MovableObjectHandle<?> getLogicalPort() {
+    Class<? extends InboundHttpPortDomain> logicalPortDomain = getLogicalPortDomain();
+    return mapTo(logicalPortDomain);
+  }
+
   @SuppressWarnings("unchecked")
-  private Class<? extends InboundHttpPortDomain> getActualPortDomain(
-      Class<? extends HttpPortExchangeChannel> exchangeChannel
-  ) {
+  private Class<? extends InboundHttpPortDomain> getLogicalPortDomain() {
     return (Class<? extends InboundHttpPortDomain>) ChannelFunctions.getChannelSourceDomainClass(exchangeChannel);
   }
 }
