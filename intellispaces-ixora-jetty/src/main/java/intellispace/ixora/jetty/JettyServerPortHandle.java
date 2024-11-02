@@ -50,7 +50,7 @@ public abstract class JettyServerPortHandle implements MovableJettyServerPort {
     try {
       MovableObjectHandle<?> logicalPort = getLogicalPort();
       if (logicalPort == null) {
-        throw TraverseException.withMessage("Could not define actual port");
+        throw TraverseException.withMessage("Could not define logical port");
       }
       servlet.init(logicalPort, exchangeChannel);
 
