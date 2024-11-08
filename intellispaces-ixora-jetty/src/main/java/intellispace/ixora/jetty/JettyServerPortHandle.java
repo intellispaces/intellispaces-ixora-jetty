@@ -3,7 +3,7 @@ package intellispace.ixora.jetty;
 import intellispaces.jaquarius.annotation.Mapper;
 import intellispaces.jaquarius.annotation.Mover;
 import intellispaces.jaquarius.annotation.ObjectHandle;
-import intellispaces.jaquarius.exception.TraverseException;
+import intellispaces.jaquarius.exception.TraverseExceptions;
 import intellispaces.jaquarius.object.MovableObjectHandle;
 import intellispaces.jaquarius.space.channel.ChannelFunctions;
 import intellispaces.ixora.http.HttpPortExchangeChannel;
@@ -50,13 +50,13 @@ public abstract class JettyServerPortHandle implements MovableJettyServerPort {
     try {
       MovableObjectHandle<?> logicalPort = getLogicalPort();
       if (logicalPort == null) {
-        throw TraverseException.withMessage("Could not define logical port");
+        throw TraverseExceptions.withMessage("Could not define logical port");
       }
       servlet.init(logicalPort, exchangeChannel);
 
       server.start();
     } catch (Exception e) {
-      throw TraverseException.withCauseAndMessage(e, "Could not open HTTP server");
+      throw TraverseExceptions.withCauseAndMessage(e, "Could not open HTTP server");
     }
     return this.asInboundHttpPort();
   }
@@ -77,7 +77,7 @@ public abstract class JettyServerPortHandle implements MovableJettyServerPort {
     try {
       server.stop();
     } catch (Exception e) {
-      throw TraverseException.withCauseAndMessage(e, "Could not close HTTP server");
+      throw TraverseExceptions.withCauseAndMessage(e, "Could not close HTTP server");
     }
   }
 
