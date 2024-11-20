@@ -1,15 +1,15 @@
 package intellispace.ixora.jetty;
 
-import intellispaces.common.base.collection.ArraysFunctions;
-import intellispaces.jaquarius.object.MovableObjectHandle;
 import intellispaces.ixora.http.HttpMethods;
 import intellispaces.ixora.http.HttpPortExchangeChannel;
 import intellispaces.ixora.http.HttpRequest;
 import intellispaces.ixora.http.HttpRequests;
 import intellispaces.ixora.http.UnmovableHttpResponse;
+import intellispaces.jaquarius.object.MovableObjectHandle;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import tech.intellispaces.entity.collection.ArraysFunctions;
 
 import java.io.IOException;
 

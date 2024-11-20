@@ -1,10 +1,10 @@
 package intellispace.ixora.jetty;
 
-import intellispaces.jaquarius.annotation.Preprocessing;
 import intellispaces.ixora.http.HttpPortExchangeChannel;
 import intellispaces.ixora.http.MovableInboundHttpPort;
 import intellispaces.ixora.http.test.AbstractInboundHttpPortTest;
 import intellispaces.ixora.http.test.TestPortExchangeGuideImpl;
+import intellispaces.jaquarius.annotation.Preprocessing;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
