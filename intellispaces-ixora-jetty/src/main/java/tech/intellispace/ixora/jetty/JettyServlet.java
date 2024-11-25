@@ -1,11 +1,11 @@
-package intellispace.ixora.jetty;
+package tech.intellispace.ixora.jetty;
 
-import intellispaces.ixora.http.HttpMethods;
-import intellispaces.ixora.http.HttpPortExchangeChannel;
-import intellispaces.ixora.http.HttpRequest;
-import intellispaces.ixora.http.HttpRequests;
-import intellispaces.ixora.http.UnmovableHttpResponse;
-import intellispaces.jaquarius.object.MovableObjectHandle;
+import tech.intellispaces.ixora.http.HttpMethods;
+import tech.intellispaces.ixora.http.HttpPortExchangeChannel;
+import tech.intellispaces.ixora.http.HttpRequest;
+import tech.intellispaces.ixora.http.HttpRequests;
+import tech.intellispaces.ixora.http.UnmovableHttpResponse;
+import tech.intellispaces.jaquarius.object.MovableObjectHandle;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

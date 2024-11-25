@@ -1,6 +1,6 @@
-package intellispace.ixora.jetty;
+package tech.intellispace.ixora.jetty;
 
-import intellispaces.ixora.http.HttpPortExchangeChannel;
+import tech.intellispaces.ixora.http.HttpPortExchangeChannel;
 
 public interface JettyServerPorts {
 

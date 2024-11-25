@@ -1,14 +1,14 @@
-package intellispace.ixora.jetty;
+package tech.intellispace.ixora.jetty;
 
-import intellispaces.ixora.http.HttpPortExchangeChannel;
-import intellispaces.ixora.http.InboundHttpPortDomain;
-import intellispaces.ixora.http.MovableInboundHttpPort;
-import intellispaces.jaquarius.annotation.Mapper;
-import intellispaces.jaquarius.annotation.Mover;
-import intellispaces.jaquarius.annotation.ObjectHandle;
-import intellispaces.jaquarius.exception.TraverseExceptions;
-import intellispaces.jaquarius.object.MovableObjectHandle;
-import intellispaces.jaquarius.space.channel.ChannelFunctions;
+import tech.intellispaces.ixora.http.HttpPortExchangeChannel;
+import tech.intellispaces.ixora.http.InboundHttpPortDomain;
+import tech.intellispaces.ixora.http.MovableInboundHttpPort;
+import tech.intellispaces.jaquarius.annotation.Mapper;
+import tech.intellispaces.jaquarius.annotation.Mover;
+import tech.intellispaces.jaquarius.annotation.ObjectHandle;
+import tech.intellispaces.jaquarius.exception.TraverseExceptions;
+import tech.intellispaces.jaquarius.object.MovableObjectHandle;
+import tech.intellispaces.jaquarius.space.channel.ChannelFunctions;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;

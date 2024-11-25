@@ -1,8 +1,8 @@
-package intellispace.ixora.jetty;
+package tech.intellispace.ixora.jetty;
 
-import intellispaces.ixora.http.InboundHttpPortDomain;
-import intellispaces.jaquarius.annotation.Channel;
-import intellispaces.jaquarius.annotation.Domain;
+import tech.intellispaces.ixora.http.InboundHttpPortDomain;
+import tech.intellispaces.jaquarius.annotation.Channel;
+import tech.intellispaces.jaquarius.annotation.Domain;
 
 @Domain("843b0222-dc2c-4a12-a75d-f98eef75bb1a")
 public interface JettyServerPortDomain extends InboundHttpPortDomain {

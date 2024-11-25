@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>intellispaces-ixora</groupId>
+        <groupId>tech.intellispaces.ixora</groupId>
         <artifactId>intellispaces-ixora-jetty-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -26,22 +26,22 @@
     <dependencies>
         <!-- Intellispaces -->
         <dependency>
-            <groupId>intellispaces-jaquarius</groupId>
+            <groupId>tech.intellispaces.jaquarius</groupId>
             <artifactId>intellispaces-jaquarius-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>intellispaces-ixora</groupId>
+            <groupId>tech.intellispaces.ixora</groupId>
             <artifactId>intellispaces-ixora-http-ontology</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>intellispaces-ixora</groupId>
+            <groupId>tech.intellispaces.ixora</groupId>
             <artifactId>intellispaces-ixora-http</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>intellispaces-ixora</groupId>
+            <groupId>tech.intellispaces.ixora</groupId>
             <artifactId>intellispaces-ixora-jetty-ontology</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -58,13 +58,13 @@
 
         <!-- Testing -->
         <dependency>
-            <groupId>intellispaces-ixora</groupId>
+            <groupId>tech.intellispaces.ixora</groupId>
             <artifactId>intellispaces-ixora-http-test</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>intellispaces-ixora</groupId>
+            <groupId>tech.intellispaces.ixora</groupId>
             <artifactId>intellispaces-ixora-http-test-ontology</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>test</scope>
