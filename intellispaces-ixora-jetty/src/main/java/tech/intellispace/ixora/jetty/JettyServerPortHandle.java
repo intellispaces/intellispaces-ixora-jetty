@@ -7,7 +7,7 @@ import tech.intellispaces.jaquarius.annotation.Mapper;
 import tech.intellispaces.jaquarius.annotation.Mover;
 import tech.intellispaces.jaquarius.annotation.ObjectHandle;
 import tech.intellispaces.jaquarius.exception.TraverseExceptions;
-import tech.intellispaces.jaquarius.object.MovableObjectHandle;
+import tech.intellispaces.jaquarius.object.reference.MovableObjectHandle;
 import tech.intellispaces.jaquarius.space.channel.ChannelFunctions;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
