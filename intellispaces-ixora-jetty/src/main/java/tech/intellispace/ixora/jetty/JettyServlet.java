@@ -9,7 +9,7 @@ import tech.intellispaces.jaquarius.object.reference.MovableObjectHandle;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import tech.intellispaces.entity.collection.ArraysFunctions;
+import tech.intellispaces.general.collection.ArraysFunctions;
 
 import java.io.IOException;
 
