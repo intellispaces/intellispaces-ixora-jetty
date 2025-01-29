@@ -2,7 +2,7 @@ package tech.intellispace.ixora.jetty;
 
 import tech.intellispaces.ixora.http.HttpPortExchangeChannel;
 import tech.intellispaces.ixora.http.InboundHttpPortDomain;
-import tech.intellispaces.ixora.http.MovableInboundHttpPort;
+import tech.intellispaces.ixora.http.MovableInboundHttpPortHandle;
 import tech.intellispaces.jaquarius.annotation.Mapper;
 import tech.intellispaces.jaquarius.annotation.Mover;
 import tech.intellispaces.jaquarius.annotation.ObjectHandle;
@@ -16,13 +16,13 @@ import org.eclipse.jetty.servlet.ServletHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
 @ObjectHandle(JettyServerPortDomain.class)
-public abstract class JettyServerPortHandle implements MovableJettyServerPort {
+public abstract class JettyServerPortHandleSimple implements MovableJettyServerPortHandle {
   private final int portNumber;
   private final Class<? extends HttpPortExchangeChannel> exchangeChannel;
   private final Server server;
   private final JettyServlet servlet;
 
-  public JettyServerPortHandle(
+  public JettyServerPortHandleSimple(
       int portNumber,
       Class<? extends HttpPortExchangeChannel> exchangeChannel
   ) {
@@ -45,7 +45,7 @@ public abstract class JettyServerPortHandle implements MovableJettyServerPort {
 
   @Mover
   @Override
-  public MovableInboundHttpPort open() {
+  public MovableInboundHttpPortHandle open() {
     try {
       MovableObjectHandle<?> logicalPort = getLogicalPort();
       if (logicalPort == null) {
@@ -62,7 +62,7 @@ public abstract class JettyServerPortHandle implements MovableJettyServerPort {
 
   @Mover
   @Override
-  public MovableInboundHttpPort close() {
+  public MovableInboundHttpPortHandle close() {
     stopServer();
     return this.asInboundHttpPort();
   }
@@ -88,7 +88,7 @@ public abstract class JettyServerPortHandle implements MovableJettyServerPort {
 
   @Mapper
   @Override
-  public int portNumberPrimitive() {
+  public int portNumberAsPrimitive() {
     return portNumber;
   }
 

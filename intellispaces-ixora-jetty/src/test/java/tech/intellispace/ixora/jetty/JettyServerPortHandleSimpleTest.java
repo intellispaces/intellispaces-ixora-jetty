@@ -1,16 +1,16 @@
 package tech.intellispace.ixora.jetty;
 
 import tech.intellispaces.ixora.http.HttpPortExchangeChannel;
-import tech.intellispaces.ixora.http.MovableInboundHttpPort;
+import tech.intellispaces.ixora.http.MovableInboundHttpPortHandle;
 import tech.intellispaces.ixora.http.test.AbstractInboundHttpPortTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * Tests for {@link JettyServerPortHandle} class.
+ * Tests for {@link JettyServerPortHandleSimple} class.
  */
-public class JettyServerPortHandleTest extends AbstractInboundHttpPortTest {
+public class JettyServerPortHandleSimpleTest extends AbstractInboundHttpPortTest {
 
   @BeforeEach
   public void init() {
@@ -23,7 +23,7 @@ public class JettyServerPortHandleTest extends AbstractInboundHttpPortTest {
   }
 
   @Override
-  public MovableInboundHttpPort getOperativePort(
+  public MovableInboundHttpPortHandle getOperativePort(
       int portNumber, Class<? extends HttpPortExchangeChannel> exchangeChannel
   ) {
     return JettyServerPorts.get(portNumber, exchangeChannel).asInboundHttpPort();
