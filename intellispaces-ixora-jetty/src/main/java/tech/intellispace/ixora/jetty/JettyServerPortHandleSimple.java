@@ -1,5 +1,10 @@
 package tech.intellispace.ixora.jetty;
 
+import org.eclipse.jetty.server.Connector;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.ServerConnector;
+import org.eclipse.jetty.servlet.ServletHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 import tech.intellispaces.ixora.http.HttpPortExchangeChannel;
 import tech.intellispaces.ixora.http.InboundHttpPortDomain;
 import tech.intellispaces.ixora.http.MovableInboundHttpPortHandle;
@@ -9,11 +14,6 @@ import tech.intellispaces.jaquarius.annotation.ObjectHandle;
 import tech.intellispaces.jaquarius.exception.TraverseExceptions;
 import tech.intellispaces.jaquarius.object.reference.MovableObjectHandle;
 import tech.intellispaces.jaquarius.space.channel.ChannelFunctions;
-import org.eclipse.jetty.server.Connector;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.ServerConnector;
-import org.eclipse.jetty.servlet.ServletHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
 
 @ObjectHandle(JettyServerPortDomain.class)
 public abstract class JettyServerPortHandleSimple implements MovableJettyServerPortHandle {

@@ -1,11 +1,11 @@
 package tech.intellispace.ixora.jetty;
 
-import tech.intellispaces.ixora.http.HttpPortExchangeChannel;
-import tech.intellispaces.ixora.http.MovableInboundHttpPortHandle;
-import tech.intellispaces.ixora.http.test.AbstractInboundHttpPortTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import tech.intellispaces.ixora.http.HttpPortExchangeChannel;
+import tech.intellispaces.ixora.http.MovableInboundHttpPortHandle;
+import tech.intellispaces.ixora.http.test.AbstractInboundHttpPortTest;
 
 /**
  * Tests for {@link JettyServerPortHandleSimple} class.
