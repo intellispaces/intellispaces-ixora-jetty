@@ -8,9 +8,9 @@ import tech.intellispaces.ixora.http.MovableInboundHttpPortHandle;
 import tech.intellispaces.ixora.http.test.AbstractInboundHttpPortTest;
 
 /**
- * Tests for {@link JettyServerPortHandleSimple} class.
+ * Tests for {@link JettyServerPortHandleImpl} class.
  */
-public class JettyServerPortHandleSimpleTest extends AbstractInboundHttpPortTest {
+public class JettyServerPortHandleImplTest extends AbstractInboundHttpPortTest {
 
   @BeforeEach
   public void init() {

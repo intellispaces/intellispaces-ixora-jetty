@@ -16,13 +16,13 @@ import tech.intellispaces.jaquarius.object.reference.MovableObjectHandle;
 import tech.intellispaces.jaquarius.space.channel.ChannelFunctions;
 
 @ObjectHandle(JettyServerPortDomain.class)
-public abstract class JettyServerPortHandleSimple implements MovableJettyServerPortHandle {
+public abstract class JettyServerPortHandleImpl implements MovableJettyServerPortHandle {
   private final int portNumber;
   private final Class<? extends HttpPortExchangeChannel> exchangeChannel;
   private final Server server;
   private final JettyServlet servlet;
 
-  public JettyServerPortHandleSimple(
+  public JettyServerPortHandleImpl(
       int portNumber,
       Class<? extends HttpPortExchangeChannel> exchangeChannel
   ) {

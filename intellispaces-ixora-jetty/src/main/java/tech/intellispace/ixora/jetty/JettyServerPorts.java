@@ -8,6 +8,6 @@ public interface JettyServerPorts {
       int portNumber,
       Class<? extends HttpPortExchangeChannel> exchangeChannel
   ) {
-    return new JettyServerPortHandleSimpleImpl(portNumber, exchangeChannel);
+    return new JettyServerPortHandleImplWrapper(portNumber, exchangeChannel);
   }
 }
